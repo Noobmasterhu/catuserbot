@@ -42,8 +42,8 @@ async def amireallyalive(event):
     reply_to_id = await reply_id(event)
     uptime = await get_readable_time((time.time() - StartTime))
     _, check_sgnirts = check_data_base_heal_th()
-    EMOJI = gvarstatus("ALIVE_EMOJI") or "✧✧"
-    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "**✮ MY BOT IS RUNNING SUCCESSFULLY ✮**"
+    EMOJI = gvarstatus("ALIVE_EMOJI") or "➪"
+    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "**✵ KAKASHI-SAMA YOUR BOT IS RUNNING SUCCESSFULLY ✵**"
     CAT_IMG = gvarstatus("ALIVE_PIC")
     cat_caption = gvarstatus("ALIVE_TEMPLATE") or temp
     caption = cat_caption.format(
@@ -75,9 +75,8 @@ async def amireallyalive(event):
 
 
 temp = "{ALIVE_TEXT}\n\n\
-**{EMOJI} Master : {mention}**\n\
+**{EMOJI} My Senpai : {mention}**\n\
 **{EMOJI} Uptime :** `{uptime}`\n\
-**{EMOJI} Telethon version :** `{telever}`\n\
 **{EMOJI} Catuserbot Version :** `{catver}`\n\
 **{EMOJI} Python Version :** `{pyver}`\n\
 **{EMOJI} Database :** `{dbhealth}`\n"
